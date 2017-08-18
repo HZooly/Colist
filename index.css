@@ -5,3 +5,9 @@
 .date {
     font-size: 0.6em;
 }
+
+.iconDelete {
+    padding-top: 2%;
+    padding-right: 3%;
+    float: right;
+}

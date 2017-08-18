@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="node_modules/onsenui/css/onsenui.min.css">
     <link rel="stylesheet" href="node_modules/onsenui/css/onsen-css-components.min.css">
+    <link rel="stylesheet" href="node_modules/ionicons/dist/css/ionicons.min.css">
     <link rel="stylesheet" href="index.css">
 
     <script src="node_modules/angular/angular.min.js"></script>
@@ -34,7 +35,9 @@
             </ul> -->
 
             <ons-card ng-repeat="note in home.notes">
-                <ons-list-header>{{note.title}}</ons-list-header>
+                <ons-list-header>{{note.title}}
+                    <ons-icon class="iconDelete" icon="ion-edit" ng-click="home.notes.$remove(note)"></ons-icon>
+                </ons-list-header>
                 <ons-list-item class="description" ng-if="note.description">{{note.description}}</ons-list-item>
                 <ons-list-item class="date">{{note.date}}</ons-list-item>
             </ons-card>
