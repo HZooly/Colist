@@ -29,6 +29,10 @@ function homeController($scope, $firebaseArray, $firebaseObject) {
                 date: new Date(Date.now()).toLocaleDateString()
             })
             ons.notification.alert('Added!')
+            me.newNote = {
+                title: '',
+                description: ''
+            }
         }
 
     }
