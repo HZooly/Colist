@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="Colist">
 
 <head>
     <meta charset="UTF-8">
@@ -8,10 +8,49 @@
 
     <script src="node_modules/angular/angular.min.js"></script>
     <script src="node_modules/onsenui/js/onsenui.min.js"></script>
-    <script src="node_modules/onsenui/js/angular-onseinui.min.js"></script>
+    <script src="node_modules/onsenui/js/angular-onsenui.min.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+    <script src="conf/firebase.js"></script>
+
+    <script src="node_modules/angularfire/dist/angularfire.min.js"></script>
+
+    <script src="app/app.js"></script>
+
+    <script src="app/home/home.controller.js"></script>
 </head>
 
 <body>
+
+    <ons-page ng-controller="homeController as home">
+        <ons-toolbar>
+            <div class="center">Colist</div>
+        </ons-toolbar>
+
+        <p style="text-align: center">
+            <!-- <ul>
+                <li ng-repeat="note in home.notes">{{note}} <a href="" ng-click="home.notes.$remove(note)">x</a></li>
+            </ul> -->
+
+            <ons-card ng-repeat="note in home.notes">
+                <ons-list-item>{{note.title}}</ons-list-item>
+                <ons-list-item>{{note.description}}</ons-list-item>
+                <ons-list-item>{{note.date}}</ons-list-item>
+            </ons-card>
+        </p>
+
+        <div style="text-align: center; margin-top: 30px">
+            <p>
+                <ons-input modifier="underbar" placeholder="Note" float ng-model="home.newNote.title"></ons-input>
+            </p>
+            <p>
+                <ons-input modifier="underbar" placeholder="Description" float ng-model="home.newNote.description"></ons-input>
+            </p>
+            <p style="margin-top: 30px;">
+                <ons-button ng-click="home.add()">Add</ons-button>
+            </p>
+        </div>
+    </ons-page>
 
 </body>
 
