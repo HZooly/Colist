@@ -6,6 +6,7 @@
   "dependencies": {
     "angular": "^1.6.5",
     "angularfire": "^2.3.0",
+    "ionicons": "^3.0.0",
     "onsenui": "^2.5.2"
   },
   "devDependencies": {},
