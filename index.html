@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="node_modules/onsenui/css/onsenui.min.css">
     <link rel="stylesheet" href="node_modules/onsenui/css/onsen-css-components.min.css">
+    <link rel="stylesheet" href="index.css">
 
     <script src="node_modules/angular/angular.min.js"></script>
     <script src="node_modules/onsenui/js/onsenui.min.js"></script>
@@ -33,9 +34,9 @@
             </ul> -->
 
             <ons-card ng-repeat="note in home.notes">
-                <ons-list-item>{{note.title}}</ons-list-item>
-                <ons-list-item>{{note.description}}</ons-list-item>
-                <ons-list-item>{{note.date}}</ons-list-item>
+                <ons-list-header>{{note.title}}</ons-list-header>
+                <ons-list-item class="description" ng-if="note.description">{{note.description}}</ons-list-item>
+                <ons-list-item class="date">{{note.date}}</ons-list-item>
             </ons-card>
         </p>
 
