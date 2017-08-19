@@ -1,5 +1,5 @@
 # Colist
-Collaborative list built with Angular / Onsen
+Collaborative list built with Angular / Onsen.
 
 ## Installation
 
@@ -7,7 +7,7 @@ Collaborative list built with Angular / Onsen
 
 `$ mv conf/firebase.sample.js conf/firebase.js`
 
-Edit Firebase following your Firebase setup
+Edit Firebase following your Firebase setup.
 
 ## Firebase Setup
 
@@ -25,3 +25,27 @@ Edit Firebase following your Firebase setup
 `{
   "notes" : {}
 }`
+
+## Build mobile application
+
+You can build this application for mobile devices with Cordova.
+
+`$ npm i -g cordova`
+
+- Create a new Cordova project.
+
+`$ cordova create <path>`
+
+- Copy your entire project into */www* folder.
+
+- Add your platforms (listed with `cordova platform`).
+
+`cordova platform add <platform>`
+
+- Build or run app.
+
+`cordova run/build <platform>`
+
+## Contributors
+
+- Hugo Torzuoli
