@@ -35,9 +35,8 @@
                 <ons-list-item class="description" ng-if="note.description">{{note.description}}</ons-list-item>
                 <ons-list-item class="date">{{note.date}}</ons-list-item>
                 <ons-list-item>
-                    <ons-button>
-                        <!-- <ons-icon class="iconDelete" icon="ion-edit" ng-click="home.notes.$remove(note)"></ons-icon> -->
-                        <ons-icon class="iconDelete" icon="ion-edit" ng-click="home.remove(note)"></ons-icon>
+                    <ons-button ng-click="home.remove(note)">
+                        <ons-icon class="iconDelete" icon="ion-edit"></ons-icon>
                     </ons-button>
                 </ons-list-item>
             </ons-card>
