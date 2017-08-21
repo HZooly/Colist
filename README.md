@@ -40,11 +40,11 @@ You can build this application for mobile devices with Cordova.
 
 - Add your platforms (listed with `cordova platform`).
 
-`cordova platform add <platform>`
+`$ cordova platform add <platform>`
 
 - Build or run app.
 
-`cordova run/build <platform>`
+`$ cordova run/build <platform>`
 
 ## Contributors
 
